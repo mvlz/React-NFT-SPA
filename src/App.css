@@ -8,13 +8,12 @@
   height: 100vh;
 }
 .container {
-  background-color: pink;
-  width: calc(100% - 6rem);
+  width: calc(100% - 5rem);
 }
 .navbar {
-  width: 6rem;
+  width: 5rem;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
 }
 .menu-list,
 .navbar {
@@ -30,5 +29,17 @@ ul {
   padding: 0;
 }
 .logo {
-  width: 60%;
+  width: 70%;
+}
+.header {
+  height: 4.5rem;
+  width: 100%;
+  background-color: white;
+}
+.main-section {
+  height: calc(100% - 9.5rem);
+  padding: 2.5rem;
+  box-shadow: inset 7px 6px 45px 3px #eeeeee;
+  background-color: #fafafa;
+  border-top-left-radius: 2rem;
 }

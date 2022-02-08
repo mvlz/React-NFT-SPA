@@ -1,16 +1,12 @@
 import Navigation from "../Components/Navigation";
-import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-const Layout = () => {
+import Header from "../Components/Header";
+const Layout = ({ children }) => {
   return (
     <>
       <Navigation />
       <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Routes>
+        <Header />
+        <section className="main-section">{children}</section>
       </div>
     </>
   );
