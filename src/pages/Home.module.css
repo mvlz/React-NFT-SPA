@@ -7,14 +7,15 @@
   border-top-left-radius: 2rem;
 }
 .topNFT {
-  width: calc(40% - 2rem);
+  width: calc(45% - 2rem);
   padding: 1rem;
   height: calc(100% - 2rem);
 }
 .rareNFT {
   height: calc(100% - 2rem);
   padding: 1rem;
-  width: calc(50% - 2rem);
+  width: calc(55% - 2rem);
+  overflow: auto;
 }
 .rareCarts {
   width: 100%;

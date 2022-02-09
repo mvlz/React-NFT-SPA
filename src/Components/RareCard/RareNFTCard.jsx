@@ -1,24 +1,23 @@
 import { Iconly } from "react-iconly";
 import "./RareNFTCard.css";
-import logo from "../../logo.png";
-import nft1 from "../../nft1.jpg";
-const RareNFTCard = () => {
+const RareNFTCard = ({ NFT }) => {
+  const { image_url, creator, owner, asset_contract } = NFT;
   return (
     <div className="rareCard">
       <div className="topBox">
         <div className="ownership">
           <div className="user">
             <div className="userImg">
-              <img src={logo} alt="" />
+              <img src={owner.profile_img_url} alt="" />
             </div>
             <div className="userInf">
               <p>Owned by</p>
-              <h3>5811EX</h3>
+              <h3>{asset_contract.owner}</h3>
             </div>
           </div>
           <div className="user">
             <div className="userImg">
-              <img src={logo} alt="" />
+              <img src={creator.profile_img_url} alt="" />
             </div>
             <div className="userInf">
               <p>Created by</p>
@@ -27,7 +26,7 @@ const RareNFTCard = () => {
           </div>
         </div>
         <div className="nftImg">
-          <img src={nft1} alt="" />
+          <img src={image_url} alt="" />
         </div>
       </div>
       <div className="priceBox">
