@@ -1,14 +1,12 @@
-import axios from "axios";
 import react, { useState } from "react";
 import RareNFTCard from "../Components/RareCard/RareNFTCard";
+import { getAllData } from "../services/CRUDServises";
 import styles from "./Home.module.css";
 const Home = () => {
   const [NFT, setNFT] = useState(null);
   const render = () => {
-    const url = "https://api.opensea.io/api/v1/assets?order_direction=desc";
-    axios.get(url).then((res) => {
+    getAllData().then((res) => {
       setNFT(res.data.assets);
-      console.log([...res.data.assets]);
     });
   };
   react.useEffect(() => {
