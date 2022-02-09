@@ -36,10 +36,3 @@ ul {
   width: 100%;
   background-color: white;
 }
-.main-section {
-  height: calc(100% - 9.5rem);
-  padding: 2.5rem;
-  box-shadow: inset 7px 6px 45px 3px #eeeeee;
-  background-color: #fafafa;
-  border-top-left-radius: 2rem;
-}

@@ -1,7 +1,7 @@
 import './App.css';
 import Layout from './layout/Layout';
 import { Routes, Route } from "react-router-dom";
-import routes from "./routes";
+import routes from "./routes.js";
 function App() {
   return (
     <div className="App">

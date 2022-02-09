@@ -1,0 +1,82 @@
+.rareCard {
+  width: calc(97% - 1rem);
+  height: 27.5rem;
+  background-color: #e8f0f2;
+  border-radius: 1.75rem;
+  box-shadow: 0px 0px 45px 4px #eee;
+  border: 4px solid white;
+  padding: 0.5rem;
+  transition: all ease 0.2s;
+}
+.topBox {
+  width: calc(100% - 1rem);
+  height: 18rem;
+  border-radius: 1.25rem;
+  background-color: white;
+  padding: 0.5rem;
+}
+.ownership,
+.bottomBox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.userImg img {
+  width: 100%;
+}
+.userImg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user {
+  display: flex;
+  gap: 0.5rem;
+}
+.user:last-of-type {
+  flex-direction: row-reverse;
+  border-left: 1px solid #ccc;
+}
+.nftImg {
+  width: 100%;
+  height: calc(100% - 3.5rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.nftImg img {
+  width: 100%;
+}
+.priceBox {
+  width: 100%;
+  height: 3rem;
+}
+.bottomBox {
+  width: calc(100% - 2rem);
+  height: 3.5rem;
+  background-color: white;
+  border-radius: 1rem 1rem 2rem 2rem;
+  padding: 1rem;
+}
+.buyNow,
+.history {
+  all: unset;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.buyNow {
+  background-color: #292b39;
+  border-radius: 0.75rem 0.75rem 1.675rem 0.75rem;
+  color: white;
+}
+.rareCard:hover {
+  background-color: white;
+}
+.rareCard:hover .buyNow {
+  background-color: blue;
+}
