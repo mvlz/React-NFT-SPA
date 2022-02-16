@@ -3,13 +3,14 @@
   padding: 1rem;
   display: flex;
   box-shadow: inset 7px 6px 45px 3px #eeeeee;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   border-top-left-radius: 2rem;
 }
 .topNFT {
-  width: calc(45% - 2rem);
-  padding: 1rem;
-  height: calc(100% - 2rem);
+  width: calc(45% - 3rem);
+  padding: 1.5rem;
+  height: calc(100% - 3rem);
+  overflow: auto;
 }
 .rareNFT {
   height: calc(100% - 2rem);

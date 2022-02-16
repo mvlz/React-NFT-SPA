@@ -24,14 +24,15 @@
   width: 100%;
 }
 .userImg {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
 }
 .user {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 .user:last-of-type {
   flex-direction: row-reverse;
