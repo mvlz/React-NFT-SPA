@@ -1,17 +1,17 @@
-import react, { useState } from "react";
+import react from "react";
+import { useSelector, useDispatch } from "react-redux";
 import RareNFTCard from "../Components/RareCard/RareNFTCard";
+import { fetchNFTs } from "../Components/redux/nft/nftAction";
 import TopNFTCard from "../Components/TopCard/TopNFTCard";
-import { getAllData } from "../services/CRUDServises";
 import styles from "./Home.module.css";
+
 const Home = () => {
-  const [NFT, setNFT] = useState(null);
-  const render = () => {
-    getAllData().then((res) => {
-      setNFT(res.data.assets);
-    });
-  };
+  const NFTData = useSelector((state) => state);
+  const { loading, error, nfts } = NFTData;
+  const dispatch = useDispatch();
+
   react.useEffect(() => {
-    render();
+    dispatch(fetchNFTs());
   }, []);
   return (
     <section className={styles.mainSection}>
@@ -23,14 +23,18 @@ const Home = () => {
       <div className={styles.rareNFT}>
         <h1>Rare NFT</h1>
         <div className={styles.rareCarts}>
-          {NFT && NFT.length ? (
-            NFT.map((nft) => {
+          {loading ? (
+            <p>
+              Please Turn On Your VPN! <br /> Loading ...
+            </p>
+          ) : error ? (
+            <p>{error}</p>
+          ) : (
+            NFTData &&
+            nfts &&
+            nfts.map((nft) => {
               return <RareNFTCard NFT={nft} key={nft.id} />;
             })
-          ) : (
-            <h2>
-              Please Turn On Your VPN! <br /> Loading ...
-            </h2>
           )}
         </div>
       </div>
