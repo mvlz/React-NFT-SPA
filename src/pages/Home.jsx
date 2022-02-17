@@ -6,12 +6,13 @@ import TopNFTCard from "../Components/TopCard/TopNFTCard";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const NFTData = useSelector((state) => state);
+  const NFTData = useSelector((state) => state.nfts);
   const { loading, error, nfts } = NFTData;
   const dispatch = useDispatch();
 
   react.useEffect(() => {
     dispatch(fetchNFTs());
+    console.log(nfts);
   }, []);
   return (
     <section className={styles.mainSection}>

@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 const Cart = () => {
-  return <h1>This is Cart</h1>;
+  const cartData = useSelector((state) => state.cart);
+  useEffect(() => {
+    console.log(cartData);
+  }, []);
+  return (
+    <>
+      <h1>Cart page</h1>
+    </>
+  );
 };
 export default Cart;

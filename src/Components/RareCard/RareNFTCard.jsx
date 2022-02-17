@@ -1,7 +1,15 @@
 import { Iconly } from "react-iconly";
 import "./RareNFTCard.css";
+import { useDispatch } from "react-redux";
+import { AddCart } from "../redux/cart/cartAction";
+
 const RareNFTCard = ({ NFT }) => {
+  const dispatch = useDispatch();
   const { image_url, creator, owner, asset_contract } = NFT;
+
+  const clickHandler = () => {
+    dispatch(AddCart(NFT));
+  };
   return (
     <div className="rareCard">
       <div className="topBox">
@@ -37,7 +45,10 @@ const RareNFTCard = ({ NFT }) => {
           <Iconly set="broken" name="Swap" />
           View history
         </button>
-        <button className="buyNow"> Buy Now</button>
+        <button className="buyNow" onClick={clickHandler}>
+          {" "}
+          Buy Now
+        </button>
       </div>
     </div>
   );
