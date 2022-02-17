@@ -1,14 +1,14 @@
 import { Iconly } from "react-iconly";
 import "./RareNFTCard.css";
 import { useDispatch } from "react-redux";
-import { AddCart } from "../redux/cart/cartAction";
+import { addCart } from "../redux/cart/cartAction";
 
 const RareNFTCard = ({ NFT }) => {
   const dispatch = useDispatch();
   const { image_url, creator, owner, asset_contract } = NFT;
 
   const clickHandler = () => {
-    dispatch(AddCart(NFT));
+    dispatch(addCart(NFT));
   };
   return (
     <div className="rareCard">

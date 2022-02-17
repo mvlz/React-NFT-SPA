@@ -12,7 +12,6 @@ const Home = () => {
 
   react.useEffect(() => {
     dispatch(fetchNFTs());
-    console.log(nfts);
   }, []);
   return (
     <section className={styles.mainSection}>

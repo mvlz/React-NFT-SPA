@@ -1,13 +1,14 @@
 import "./Cart.css";
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Iconly } from "react-iconly";
+import { deleteCart } from "../../Components/redux/cart/cartAction";
 
 const Cart = () => {
   const cartData = useSelector((state) => state.cart);
-  useEffect(() => {
-    console.log(cartData);
-  }, []);
+  const dispatch = useDispatch();
+  const deleteHandler = (id) => {
+    dispatch(deleteCart(id));
+  };
   return (
     <div className="mainSection">
       <div className="cartContainer">
@@ -16,7 +17,10 @@ const Cart = () => {
             cartData.cart.map((c) => {
               return (
                 <div className="cartItem" key={c.id}>
-                  <button className="btn deleteBtn">
+                  <button
+                    className="btn deleteBtn"
+                    onClick={() => deleteHandler(c.id)}
+                  >
                     <Iconly set="light" name="Delete" size="small" />
                   </button>
                   <div className="cartImg">
@@ -32,7 +36,7 @@ const Cart = () => {
               );
             })
           ) : (
-            <p>Empty</p>
+            <p>Your cart is empty !</p>
           )}
         </div>
         <div className="cartSummary">hi</div>
