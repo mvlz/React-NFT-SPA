@@ -1,8 +1,8 @@
 import react from "react";
 import { useSelector, useDispatch } from "react-redux";
-import RareNFTCard from "../Components/RareCard/RareNFTCard";
-import { fetchNFTs } from "../Components/redux/nft/nftAction";
-import TopNFTCard from "../Components/TopCard/TopNFTCard";
+import RareNFTCard from "../../Components/RareCard/RareNFTCard";
+import { fetchNFTs } from "../../Components/redux/nft/nftAction";
+import TopNFTCard from "../../Components/TopCard/TopNFTCard";
 import styles from "./Home.module.css";
 
 const Home = () => {

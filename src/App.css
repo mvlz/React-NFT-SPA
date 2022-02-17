@@ -31,3 +31,10 @@ ul {
   width: 100%;
   background-color: white;
 }
+.mainSection {
+  height: calc(100% - 7.5rem);
+  padding: 1rem;
+  box-shadow: inset 7px 6px 45px 3px #eeeeee;
+  background-color: #f7f7f7;
+  border-top-left-radius: 2rem;
+}
