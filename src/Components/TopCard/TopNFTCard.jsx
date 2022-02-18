@@ -23,7 +23,10 @@ const TopNFTCard = () => {
         <div className="NFTContainer">
           <div className="rate">01</div>
           <div className="creator">
-            <img src="" alt="" />
+            <img
+              src="https://lh3.googleusercontent.com/Su3hdjDh9jQnUBRKvAMdyzyybd0gqg2OfdQa6Il_r6Niye78FmHFpT7Bv-i8ll7NEHffy8vco6tami4F87_3LMHc2zd2KIMtu_RiRw"
+              alt=""
+            />
           </div>
           <div className="NFTImg">
             <img src={TopNFT} alt="" />

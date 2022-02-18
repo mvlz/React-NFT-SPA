@@ -60,6 +60,7 @@
 }
 .cartImg img {
   height: 100%;
+  width: inherit;
 }
 .cartBody {
   height: 100%;

@@ -52,55 +52,55 @@ const Cart = () => {
           </div>
         </div>
       </div>
-      <div class="right-content">
-        <div class="wallet">
+      <div className="right-content">
+        <div className="wallet">
           <h1>My Wallet</h1>
-          <p class="nft-type">Recommended</p>
-          <div class="cart">
-            <div class="circles">
-              <span class="circle fill"></span>
-              <span class="circle "></span>
+          <p className="nft-type">Recommended</p>
+          <div className="cart">
+            <div className="circles">
+              <span className="circle fill"></span>
+              <span className="circle "></span>
             </div>
-            <div class="cart-number">
+            <div className="cart-number">
               <p>Cart Number</p>
-              <h3 class="cart-num">3829 4820 4629 5025</h3>
+              <h3 className="cart-num">3829 4820 4629 5025</h3>
             </div>
-            <div class="cart-inf">
-              <div class="cart-name">
+            <div className="cart-inf">
+              <div className="cart-name">
                 <p>Cart Holder Name</p>
-                <p class="name">AR Shakir</p>
+                <p className="name">AR Shakir</p>
               </div>
-              <div class="cart-name">
+              <div className="cart-name">
                 <p>vaid thru</p>
-                <p class="date">09/24</p>
+                <p className="date">09/24</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="overview">
+        <div className="overview">
           <h1>Overview</h1>
-          <div class="cart">
+          <div className="cart">
             <p>Available balance in USD</p>
-            <h3 class="balance">213,150.15</h3>
-            <div class="transaction-wallet">
-              <div class="transaction">
+            <h3 className="balance">213,150.15</h3>
+            <div className="transaction-wallet">
+              <div className="transaction">
                 <p>Transaction</p>
-                <p class="t-num">34,405</p>
+                <p className="t-num">34,405</p>
               </div>
-              <div class="wallet">
+              <div className="wallet">
                 <p>wallet</p>
-                <p class="v-num">23</p>
+                <p className="v-num">23</p>
               </div>
             </div>
             <p>Last activity at 26 nov, 2021</p>
           </div>
         </div>
-        <div class="coins-wallets">
+        <div className="coins-wallets">
           <Link to={"/checkout"}>
-            <div class="coin-wallet">
-              <p class="coin-wallet-name">BTC Wallet</p>
-              <p class="wallet-amount">
-                4.434953 <span class="coin-name">BTC</span>
+            <div className="coin-wallet">
+              <p className="coin-wallet-name">BTC Wallet</p>
+              <p className="wallet-amount">
+                4.434953 <span className="coin-name">BTC</span>
               </p>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png"
@@ -109,10 +109,10 @@ const Cart = () => {
             </div>
           </Link>
           <Link to={"/checkout"}>
-            <div class="coin-wallet">
-              <p class="coin-wallet-name">Etherium Wallet</p>
-              <p class="wallet-amount">
-                4.434953 <span class="coin-name">ETH</span>
+            <div className="coin-wallet">
+              <p className="coin-wallet-name">Etherium Wallet</p>
+              <p className="wallet-amount">
+                4.434953 <span className="coin-name">ETH</span>
               </p>
               <img
                 src="https://cdn.freelogovectors.net/svg05/ethereum-logo.svg"
