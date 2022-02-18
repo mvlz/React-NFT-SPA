@@ -1,6 +1,6 @@
 import "./TopNFTCard.css";
 import { Iconly } from "react-iconly";
-import TopNFT from "../../TopNFT.png";
+import TopNFT from "../../assets/TopNFT.png";
 
 const TopNFTCard = () => {
   return (

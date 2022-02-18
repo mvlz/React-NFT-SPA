@@ -1,0 +1,19 @@
+li {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.65rem;
+  width: 1.35rem;
+  height: 1.25rem;
+  background-color: deeppink;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: segoe ui;
+  font-weight: 400;
+}

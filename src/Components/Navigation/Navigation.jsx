@@ -1,15 +1,19 @@
+import "./Navigation.css";
 import { Link } from "react-router-dom";
-import logo from "../logo.png";
+import logo from "../../assets/logo.png";
 import { Iconly } from "react-iconly";
+import { useSelector } from "react-redux";
 
 const items = [
   { name: "Home", to: "/", color: "black", set: "bold" },
   { name: "Image2", to: "/gallery" },
-  { name: "Bag", to: "/cart" },
+  { name: "Bag", to: "/cart", badge: true },
   { name: "Star", to: "/saved" },
   { name: "User", to: "/profile" },
 ];
 const Navigation = () => {
+  const cartData = useSelector((state) => state.cart);
+  const { cart } = cartData;
   return (
     <nav className="navbar">
       <img src={logo} alt="1NFT" className="logo" />
@@ -25,6 +29,11 @@ const Navigation = () => {
                   stroke="bold"
                 />
               </Link>
+              {item.badge && cart.length > 0 && (
+                <span className="badge">
+                  {cart.length < 10 ? "0" + cart.length : cart.length}
+                </span>
+              )}
             </li>
           );
         })}

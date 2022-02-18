@@ -1,10 +1,12 @@
 import { Iconly } from "react-iconly";
 import "./RareNFTCard.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addCart } from "../redux/cart/cartAction";
+import { checkInCart } from "../../utils/checkInCart";
 
 const RareNFTCard = ({ NFT }) => {
   const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.cart);
   const { image_url, creator, owner, asset_contract } = NFT;
 
   const clickHandler = () => {
@@ -46,8 +48,7 @@ const RareNFTCard = ({ NFT }) => {
           View history
         </button>
         <button className="buyNow" onClick={clickHandler}>
-          {" "}
-          Buy Now
+          {checkInCart(cart, NFT) ? "in cart" : "Buy Now"}
         </button>
       </div>
     </div>
