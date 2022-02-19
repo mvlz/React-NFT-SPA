@@ -3,7 +3,7 @@ import Checkout from "./pages/checkout/Checkout"
 import Gallery from "./pages/Gallery"
 import Home from "./pages/HomePage/Home"
 import Profile from "./pages/Profile"
-import Saved from "./pages/Saved"
+import Saved from "./pages/SavedPage/Saved"
 import Setting from "./pages/Setting"
 const routes = [
     { path: "/", element: <Home /> },
