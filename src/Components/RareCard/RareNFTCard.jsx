@@ -3,6 +3,7 @@ import "./RareNFTCard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addCart } from "../redux/cart/cartAction";
 import { checkInCart } from "../../utils/checkInCart";
+import { addSaved } from "../redux/saved/savedAction";
 
 const RareNFTCard = ({ NFT }) => {
   const dispatch = useDispatch();
@@ -11,6 +12,9 @@ const RareNFTCard = ({ NFT }) => {
 
   const clickHandler = () => {
     dispatch(addCart(NFT));
+  };
+  const savedHandler = () => {
+    dispatch(addSaved(NFT));
   };
   return (
     <div className="rareCard">
@@ -41,6 +45,7 @@ const RareNFTCard = ({ NFT }) => {
       </div>
       <div className="priceBox">
         <p>Price: ETH5.65 - X1 = ($10,344)</p>
+        <button onClick={savedHandler}>fav</button>
       </div>
       <div className="bottomBox">
         <button className="history">
