@@ -17,3 +17,17 @@ li {
   font-family: segoe ui;
   font-weight: 400;
 }
+.activated {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.activated::before {
+  position: absolute;
+  left: -2.15rem;
+  content: "";
+  width: 0.75rem;
+  height: 4rem;
+  background-color: black;
+  border-radius: 0 20px 20px 0;
+}

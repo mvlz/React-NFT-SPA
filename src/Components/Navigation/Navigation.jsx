@@ -1,19 +1,25 @@
 import "./Navigation.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { Iconly } from "react-iconly";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const items = [
-  { name: "Home", to: "/", color: "black", set: "bold" },
+  { name: "Home", to: "/" },
   { name: "Image2", to: "/gallery" },
   { name: "Bag", to: "/cart", badge: true },
   { name: "Star", to: "/saved" },
   { name: "User", to: "/profile" },
 ];
 const Navigation = () => {
+  const [pathname, setpathname] = useState("/");
   const cartData = useSelector((state) => state.cart);
   const { cart } = cartData;
+  function clickH(to) {
+    setpathname(to);
+  }
+
   return (
     <nav className="navbar">
       <img src={logo} alt="1NFT" className="logo" />
@@ -21,14 +27,19 @@ const Navigation = () => {
         {items.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) => (isActive ? " activated" : "")}
+                onClick={() => clickH(item.to)}
+              >
                 <Iconly
-                  primaryColor={item.color ? item.color : "darkgray"}
-                  set={item.set ? item.set : "light"}
+                  primaryColor={pathname === item.to ? "black" : "darkgray"}
+                  set={"light"}
                   name={item.name}
                   stroke="bold"
+                  filled={pathname === item.to ? true : false}
                 />
-              </Link>
+              </NavLink>
               {item.badge && cart.length > 0 && (
                 <span className="badge">
                   {cart.length < 10 ? "0" + cart.length : cart.length}
@@ -38,14 +49,21 @@ const Navigation = () => {
           );
         })}
       </ul>
-      <Link to="/setting">
+      <NavLink
+        to="/setting"
+        className={({ isActive }) =>
+          "nav-link" + (isActive ? " activated" : "")
+        }
+        onClick={() => clickH("/setting")}
+      >
         <Iconly
           set="light"
           name="Setting"
-          primaryColor="darkgray"
+          primaryColor={pathname === "/setting" ? "black" : "darkgray"}
           stroke="bold"
+          filled={pathname === "/setting" ? true : false}
         />
-      </Link>
+      </NavLink>
     </nav>
   );
 };

@@ -9,7 +9,6 @@ const Saved = () => {
   const deleteHandler = (id) => {
     dispatch(deleteSaved(id));
   };
-  const { cart } = useSelector((state) => state.cart);
 
   const addToCartHandler = (product) => {
     dispatch(addCart(product));

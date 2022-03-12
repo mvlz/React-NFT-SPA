@@ -115,7 +115,7 @@ const Cart = () => {
                 4.434953 <span className="coin-name">ETH</span>
               </p>
               <img
-                src="https://cdn.freelogovectors.net/svg05/ethereum-logo.svg"
+                src="https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg"
                 alt=""
               />
             </div>
