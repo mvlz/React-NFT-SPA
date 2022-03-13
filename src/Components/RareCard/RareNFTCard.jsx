@@ -8,6 +8,7 @@ import { addSaved } from "../redux/saved/savedAction";
 const RareNFTCard = ({ NFT }) => {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
+  const { saved } = useSelector((state) => state.saved);
   const { image_url, creator, owner, asset_contract } = NFT;
 
   const clickHandler = () => {
@@ -16,6 +17,9 @@ const RareNFTCard = ({ NFT }) => {
   const savedHandler = () => {
     dispatch(addSaved(NFT));
   };
+  function checkInSaved(saved, product) {
+    return saved.find((c) => c.id === product.id);
+  }
   return (
     <div className="rareCard">
       <div className="topBox">
@@ -42,10 +46,22 @@ const RareNFTCard = ({ NFT }) => {
         <div className="nftImg">
           <img src={image_url} alt="" />
         </div>
+        <button onClick={savedHandler} className="saved">
+          <Iconly
+            set={checkInSaved(saved, NFT) ? "bold" : "light"}
+            name="Star"
+            // stroke="bold"
+            primaryColor={checkInSaved(saved, NFT) ? "deeppink" : "gray"}
+            // size="large"
+          />
+        </button>
       </div>
       <div className="priceBox">
-        <p>Price: ETH5.65 - X1 = ($10,344)</p>
-        <button onClick={savedHandler}>fav</button>
+        <p>
+          <strong>Price: </strong> ETH5.65 - X1
+        </p>
+        <p className="equalSign">=</p>
+        <p>($10,344)</p>
       </div>
       <div className="bottomBox">
         <button className="history">

@@ -1,19 +1,23 @@
 .rareCard {
   width: calc(97% - 1rem);
-  height: 27.5rem;
+  min-height: 27.5rem;
   background-color: #e8f0f2;
   border-radius: 1.75rem;
   box-shadow: 0px 0px 45px 4px #eee;
   border: 4px solid white;
   padding: 0.5rem;
   transition: all ease 0.2s;
+  position: relative;
 }
 .topBox {
-  width: calc(100% - 1rem);
-  height: 18rem;
-  border-radius: 1.25rem;
-  background-color: white;
-  padding: 0.5rem;
+  width: calc(100% - 2rem);
+  height: 17rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  background-image: linear-gradient(180deg, white, #f6f8f9);
+  position: relative;
+  box-shadow: 0px 24px 35px -21px #ccdbe4ab;
+  position: relative;
 }
 .ownership,
 .bottomBox {
@@ -24,10 +28,25 @@
   width: 100%;
 }
 .userImg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   overflow: hidden;
+}
+.equalSign {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+}
+.userInf {
+  font-size: 13px;
 }
 .user {
   display: flex;
@@ -40,17 +59,13 @@
 }
 .nftImg {
   width: 100%;
-  height: calc(100% - 3.5rem);
+  height: calc(100% - 3.25rem);
   border-radius: 1rem;
   overflow: hidden;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .nftImg img {
   width: 100%;
-}
-.priceBox {
-  width: 100%;
-  height: 3rem;
 }
 .bottomBox {
   width: calc(100% - 2rem);
@@ -80,4 +95,12 @@
 }
 .inCart {
   background-color: #292b39;
+}
+.saved {
+  all: unset;
+  position: absolute;
+  /* left: calc(50% - 0.75rem); */
+  right: 1.75rem;
+  top: 5rem;
+  cursor: pointer;
 }

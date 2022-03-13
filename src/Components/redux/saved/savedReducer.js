@@ -11,8 +11,11 @@ const savedReducer = (state = initialState, action) => {
             if (updatedItemIndex < 0) {
                 updatedSaved.push({ ...action.payload })
                 return { ...state, saved: updatedSaved }
+            } else {
+                updatedSaved.splice(updatedItemIndex, 1)
+                return { ...state, saved: updatedSaved }
             }
-            return { ...state, saved: updatedSaved }
+
         case DELETE_SAVED:
             const saved = [...state.saved]
             const filteredSaved = saved.filter(item => item.id !== action.payload)
