@@ -41,3 +41,14 @@ ul {
   background-color: #f7f7f7;
   border-top-left-radius: 2rem;
 }
+
+.dark-content {
+  background: #101b20;
+  filter: hue-rotate(180deg) invert(1);
+}
+.dark-content img,
+.dark-content video,
+.dark-content iframe,
+.dark-content canvas {
+  filter: invert(1) hue-rotate(180deg);
+}
