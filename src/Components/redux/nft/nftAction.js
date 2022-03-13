@@ -25,14 +25,11 @@ function fetchNFTFail(error) {
 export const fetchNFTs = () => {
     return function (dispatch) {
         dispatch(fetchNFTRequest())
-        console.log("req");
         getAllData().then(res => {
             const nfts = res.data.assets
-            console.log("success");
             dispatch(fetchNFTSuccess(nfts))
         }).catch(error => {
             dispatch(fetchNFTFail(error.message))
-            console.log(error.message);
         })
     }
 }

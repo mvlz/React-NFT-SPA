@@ -10,7 +10,6 @@ const Cart = () => {
   const deleteHandler = (id) => {
     dispatch(deleteCart(id));
   };
-  console.log(cart);
   return (
     <div className="mainSection">
       <div className="cartContainer">

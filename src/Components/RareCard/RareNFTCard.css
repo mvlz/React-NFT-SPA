@@ -71,13 +71,13 @@
   gap: 0.5rem;
 }
 .buyNow {
-  background-color: #292b39;
   border-radius: 0.75rem 0.75rem 1.675rem 0.75rem;
   color: white;
+  background-color: blue;
 }
 .rareCard:hover {
   background-color: white;
 }
-.rareCard:hover .buyNow {
-  background-color: blue;
+.inCart {
+  background-color: #292b39;
 }

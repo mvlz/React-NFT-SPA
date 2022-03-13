@@ -3,9 +3,13 @@ import { Iconly } from "react-iconly";
 import "./Saved.css";
 import { deleteSaved } from "../../Components/redux/saved/savedAction";
 import { addCart } from "../../Components/redux/cart/cartAction";
+import { checkInCart } from "../../utils/checkInCart";
+
 const Saved = () => {
   const { saved } = useSelector((state) => state.saved);
+  const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
   const deleteHandler = (id) => {
     dispatch(deleteSaved(id));
   };
@@ -32,14 +36,19 @@ const Saved = () => {
                   className="buyNow"
                   onClick={() => addToCartHandler(item)}
                 >
-                  Buy Now
+                  {checkInCart(cart, item) ? "in cart" : "Buy Now"}
                 </button>
               </div>
               <button
                 className="savedBtn"
                 onClick={() => deleteHandler(item.id)}
               >
-                <Iconly set="bold" name="Star" stroke="light" />
+                <Iconly
+                  set="bold"
+                  name="Star"
+                  stroke="light"
+                  primaryColor="deeppink"
+                />
               </button>
             </div>
           );
