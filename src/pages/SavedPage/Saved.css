@@ -5,11 +5,9 @@
   gap: 1rem;
 }
 .savedSection {
-  height: calc(100% - 9.5rem);
-  padding: 2rem;
-  box-shadow: inset 7px 6px 45px 3px #eeeeee;
-  background-color: #f7f7f7;
-  border-top-left-radius: 2rem;
+  max-height: calc(100%);
+  padding: 1rem;
+  overflow: auto;
 }
 .SavedItemsContainer {
   width: 100%;

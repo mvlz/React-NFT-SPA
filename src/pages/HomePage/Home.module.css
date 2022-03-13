@@ -1,10 +1,6 @@
 .mainSection {
-  height: calc(100% - 7.5rem);
-  padding: 1rem;
+  height: calc(100%);
   display: flex;
-  box-shadow: inset 7px 6px 45px 3px #eeeeee;
-  background-color: #f7f7f7;
-  border-top-left-radius: 2rem;
 }
 .topNFT {
   width: calc(45% - 3rem);
