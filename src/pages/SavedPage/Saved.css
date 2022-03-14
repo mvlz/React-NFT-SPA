@@ -35,6 +35,8 @@
 }
 .savedImg img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .savedFooter .buyNow {
   border-radius: 0.5rem 0.5rem 1.25rem 0.5rem;

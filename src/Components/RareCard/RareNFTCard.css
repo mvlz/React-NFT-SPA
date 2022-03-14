@@ -67,6 +67,8 @@
 }
 .nftImg img {
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 .bottomBox {
   width: calc(100% - 2rem);
@@ -103,4 +105,19 @@
   right: 1.75rem;
   top: 5rem;
   cursor: pointer;
+}
+@media screen and (max-width: 566.99px) {
+  .rareCard {
+    height: auto;
+  }
+  .priceBox {
+    font-size: 1rem;
+  }
+  .bottomBox {
+    height: 3rem;
+    border-radius: 0.75rem 0.75rem 1.25rem 1.25rem;
+  }
+  .buyNow {
+    border-radius: 0.5rem 0.5rem 1.375rem 0.5rem;
+  }
 }

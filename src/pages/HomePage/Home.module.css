@@ -29,23 +29,26 @@
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 @media screen and (max-width: 777.99px) {
+  .rareCarts,
+  .rareNFT,
+  .topNFT,
+  .mainSection {
+    height: unset;
+  }
   .mainSection {
     height: unset;
     display: grid;
     grid-template-columns: none;
     grid-gap: 3rem;
   }
-  .rareNFT {
-    height: calc(100% - 2rem);
-    padding: 1rem;
-    width: calc(100% - 2rem);
-    overflow: auto;
-  }
   div.topNFT {
     width: calc(100% - 3rem);
     padding: 1.5rem;
     height: unset;
-    overflow: auto;
     margin: 0;
+  }
+  div.rareNFT {
+    padding: 0;
+    width: 100%;
   }
 }
