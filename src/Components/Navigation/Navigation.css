@@ -24,7 +24,7 @@ li {
 }
 .activated::before {
   position: absolute;
-  left: -2.15rem;
+  left: -1.8rem;
   content: "";
   width: 0.75rem;
   height: 4rem;

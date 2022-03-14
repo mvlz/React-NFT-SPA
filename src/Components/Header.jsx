@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { ThemeContext, themes } from "../theme/themeContext";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(true);
   return (
     <header className="header">
+      <img src={logo} alt="1NFT" className="logo" />
+
       <ThemeContext.Consumer>
         {({ changeTheme }) => (
           <button

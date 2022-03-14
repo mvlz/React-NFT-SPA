@@ -3,9 +3,9 @@ import Header from "../Components/Header";
 const Layout = ({ children }) => {
   return (
     <>
-      <Navigation />
+      <Header />
       <div className="container">
-        <Header />
+        <Navigation />
         <section className="mainWrapper">{children}</section>
       </div>
     </>

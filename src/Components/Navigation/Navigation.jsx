@@ -1,6 +1,5 @@
 import "./Navigation.css";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import { Iconly } from "react-iconly";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -22,7 +21,6 @@ const Navigation = () => {
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="1NFT" className="logo" />
       <ul className="menu-list">
         {items.map((item, index) => {
           return (

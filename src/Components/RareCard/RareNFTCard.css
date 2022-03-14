@@ -1,5 +1,6 @@
 .rareCard {
-  width: calc(97% - 1rem);
+  min-width: 17rem;
+  max-width: 100%;
   min-height: 27.5rem;
   background-color: #e8f0f2;
   border-radius: 1.75rem;
@@ -99,7 +100,6 @@
 .saved {
   all: unset;
   position: absolute;
-  /* left: calc(50% - 0.75rem); */
   right: 1.75rem;
   top: 5rem;
   cursor: pointer;

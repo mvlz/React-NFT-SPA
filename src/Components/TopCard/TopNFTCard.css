@@ -33,8 +33,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 17rem;
-  height: 17rem;
+  width: 19rem;
+  height: 19rem;
   border-radius: 50%;
   border: 4px solid white;
   background-color: #f4f4f4;
@@ -44,9 +44,9 @@
 .NFTBorder {
   border-radius: 50%;
   box-shadow: 0px 0px 39px 4px #eee, inset 0px 0px 39px 4px #eee;
-  width: 19rem;
+  width: 21rem;
   border: 5px solid #fff;
-  height: 19rem;
+  height: 21rem;
   position: relative;
   text-align: center;
   transform: rotate(0deg);
@@ -58,8 +58,8 @@
 .NFTBorder:before {
   content: "";
   position: absolute;
-  height: 16.5rem;
-  width: 15.5rem;
+  height: 18.5rem;
+  width: 17.5rem;
   background: #f4f4f4;
   border: 5px solid #fff;
   transform: rotate(90deg);
@@ -67,8 +67,8 @@
 .NFTBorder::after {
   content: "";
   position: absolute;
-  height: 19rem;
-  width: 19rem;
+  height: 21rem;
+  width: 21rem;
   background: #f4f4f4;
   transform: rotate(90deg);
   border-radius: 50%;
@@ -104,7 +104,7 @@
   border-radius: 30px 30px 0px 0px;
   background-color: #3f51b5;
   position: absolute;
-  top: -25px;
+  top: -0.6;
   z-index: 2;
   display: flex;
   justify-content: center;
