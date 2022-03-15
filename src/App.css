@@ -31,8 +31,11 @@ ul {
 }
 .header {
   height: 3.5rem;
-  width: 100%;
+  width: calc(100% - 2rem);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
 .header .logo {
   width: 3.5rem;
@@ -59,7 +62,57 @@ ul {
 .dark-content canvas {
   filter: invert(1) hue-rotate(180deg);
 }
-
+.rightheader {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+.darkModeBtn {
+  all: unset;
+  cursor: pointer;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+  text-align: center;
+  background: #000;
+}
+.sun:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: #000;
+  transform: rotate(45deg);
+}
+.sun::after {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.moon {
+  display: block;
+  background-color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  transform: rotate(261deg);
+  box-shadow: inset 0px 10px #000, inset 0px 4px 1px 1px #000;
+}
 @media screen and (max-width: 777.99px) {
   .App {
     min-height: 100vh;
