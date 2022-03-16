@@ -5,6 +5,7 @@ import Home from "./pages/HomePage/Home"
 import Profile from "./pages/Profile"
 import Saved from "./pages/SavedPage/Saved"
 import Setting from "./pages/Setting"
+import Signup from "./pages/Signup/Signup"
 const routes = [
     { path: "/", element: <Home /> },
     { path: "/gallery", element: <Gallery /> },
@@ -12,6 +13,7 @@ const routes = [
     { path: "/saved", element: <Saved /> },
     { path: "/profile", element: <Profile /> },
     { path: "/setting", element: <Setting /> },
+    { path: "/signup", element: <Signup /> },
     { path: "/checkout", element: <Checkout /> },
 ]
 export default routes
