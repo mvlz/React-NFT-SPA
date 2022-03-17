@@ -12,7 +12,7 @@ const items = [
   { name: "User", to: "/profile" },
 ];
 const Navigation = () => {
-  const [pathname, setpathname] = useState("/");
+  const [pathname, setpathname] = useState("");
   const cartData = useSelector((state) => state.cart);
   const { cart } = cartData;
   function clickH(to) {
