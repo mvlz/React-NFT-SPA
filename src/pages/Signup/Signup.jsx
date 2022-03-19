@@ -15,7 +15,12 @@ const onSubmit = (values) => {
 const validationSchema = Yup.object({
   name: Yup.string().required("Please Enter your NAME"),
   username: Yup.string().required("Please Enter your USERNAME"),
-  password: Yup.string().required("Please Enter your PASSWORD"),
+  password: Yup.string()
+    .required("Please Enter your PASSWORD")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    ),
   passwordConfirm: Yup.string()
     .required("Password confirmation is required")
     .oneOf([Yup.ref("password"), null], "Password must match"),

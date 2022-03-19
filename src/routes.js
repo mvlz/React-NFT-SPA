@@ -2,6 +2,7 @@ import Cart from "./pages/CartPage/Cart"
 import Checkout from "./pages/checkout/Checkout"
 import Gallery from "./pages/Gallery"
 import Home from "./pages/HomePage/Home"
+import Login from "./pages/Login/Login"
 import NotFoundPage from "./pages/NotFound/NotFound"
 import Profile from "./pages/Profile"
 import Saved from "./pages/SavedPage/Saved"
@@ -15,6 +16,7 @@ const routes = [
     { path: "/profile", element: <Profile /> },
     { path: "/setting", element: <Setting /> },
     { path: "/signup", element: <Signup /> },
+    { path: "/login", element: <Login /> },
     { path: "/checkout", element: <Checkout /> },
     { path: "/*", element: <NotFoundPage /> },
 ]
